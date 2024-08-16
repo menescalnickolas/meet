@@ -1,6 +1,8 @@
-const Event = () => {
+import React from "react";
+
+const Event = ({event}) => {
   return (
-    <li></li>
+    <li>{event.location}</li>
   );
 }
 
