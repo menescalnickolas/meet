@@ -20,3 +20,7 @@ describe('<EventList /> component', () => {
     expect(EventListComponent.getAllByRole("listitem")).toHaveLength(mockData.length);
   });
 });
+
+describe('<EventList /> integration', () => {
+
+});
