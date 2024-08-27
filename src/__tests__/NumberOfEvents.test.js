@@ -26,5 +26,4 @@ describe('<NumberOfEvents /> component', () => {
     NumberOfEventsComponent.rerender(<NumberOfEvents />);
     expect(numberOfEvents).toHaveValue('10');
   })
-
 });
