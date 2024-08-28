@@ -87,6 +87,6 @@ input[type="number"] {
   cursor: pointer;
 }
 
-li p {
+.individual-event {
   border: 2px solid black; 
 }
