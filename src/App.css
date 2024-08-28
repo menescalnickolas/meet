@@ -86,7 +86,3 @@ input[type="number"] {
   outline: none;
   cursor: pointer;
 }
-
-.individual-event {
-  border: 2px solid black; 
-}
