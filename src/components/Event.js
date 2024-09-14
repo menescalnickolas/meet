@@ -9,7 +9,7 @@ const Event = ({event}) => {
             <p>{event.start?.dateTime}</p>
             <p>{event.end?.dateTime}</p>
             <p>{event.location}</p>
-            <button onClick={()=>setShowDetails(!showDetails)}>
+            <button className="detail-btn" onClick={()=>setShowDetails(!showDetails)}>
                 { showDetails ? "Hide details" : "Show details"}
             </button>
             {
