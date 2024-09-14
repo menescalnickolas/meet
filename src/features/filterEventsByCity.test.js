@@ -11,7 +11,6 @@ defineFeature(feature, test => {
     let AppComponent;
 
     given('user hasn’t searched for any city', () => {
-
     });
 
     when('the user opens the app', () => {
