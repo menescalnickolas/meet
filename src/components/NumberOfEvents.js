@@ -7,14 +7,16 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
   const handleInputChanged = (e) => {
     let value = e.target.value
     setNumber(value)
+
     let errorText;
-    if(value === isNaN || value.length <= 0) { 
+    if (isNaN(value) || value < 0) { 
       errorText = 'Please enter a valid number'
     } else {
-      errorText = ''
+      errorText = '';
     }
-    setCurrentNOE(value)
-    // setErrorAlert(errorText) 
+    setCurrentNOE(value);
+    setErrorAlert(errorText); 
+    
   }
  
   return (
