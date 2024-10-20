@@ -31,26 +31,40 @@ const EventGenresChart = ({ events }) => {
       <text
         x={x}
         y={y}
-        fill="#fff"
+        fill="#000"
         textAnchor={x > cx ? 'start' : 'end'}
         dominantBaseline="central"
       >
-        {`${(percent * 100).toFixed(0)}%`}
+        {`${data[index].name} (${(percent * 100).toFixed(0)}%)`}
       </text>
     ) : null;
   };
 
+  const colors = ['#5F9EA0', '#66CCCC', '#9B59B6', '#DA70D6', '#3e40d6'];
+
+
   return (
     <ResponsiveContainer width="99%" height={400}>
-      <PieChart>
+      <PieChart
+        margin={{
+          top: 40,
+          bottom: 80
+        }}>
         <Pie
           data={data}
           dataKey="value"
           fill="#8884d8"
           labelLine={false}
           label={renderCustomizedLabel}
-          outerRadius={130}           
-        />
+          outerRadius={130}
+        >
+          {data.map((entry, index) => (
+            <Cell 
+            key={`cell-${index}`} 
+            fill={colors[index]} 
+            />
+          ))}
+        </Pie>
       </PieChart>
     </ResponsiveContainer>
   );
